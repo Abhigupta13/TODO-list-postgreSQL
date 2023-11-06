@@ -8,8 +8,8 @@
     ],
     "routes": [
       {
-        "source": "/feedback/((?!general).*)",
-       "destination": "/api/feedback/general"
+        "src": "/(.*)",
+        "dest": "/"
       }
     ]
 }
