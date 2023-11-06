@@ -43,7 +43,7 @@ const Auth = (endpoint) => {
             <input type='email' placeholder='email' onChange={(e)=>setEmail(e.target.value)}/>
             <input type='password' placeholder='password' onChange={(e)=>setPassword(e.target.value)}/>
             {!isLogIn && <input type="password" placeholder='confirm password' onChange={(e)=>setConfirmPassword(e.target.value)}/>}
-            <input type='submit' className='create' onClick={(e,endpoint)=>{handleSubmit(e,isLogIn ? 'login': 'signup')}}/>
+            <input type='submit' className='create' onClick={(e)=>{handleSubmit(e,isLogIn ? 'login': 'signup')}}/>
             {error && <p>{error}</p>}
           </form>
           <div className="auth-option">
