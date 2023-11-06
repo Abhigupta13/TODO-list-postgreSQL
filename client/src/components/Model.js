@@ -13,7 +13,7 @@ const Model = ({mode,setShowModel,task,getData}) => {
     date:editMode? task.date:new Date(),
   })
 const editData =async(e)=>{
-e.preventDefault();
+e.preventDefault(); 
 try {
   const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/todos/${task.id}`,{
     method: 'PUT',

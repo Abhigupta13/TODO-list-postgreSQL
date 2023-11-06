@@ -1,9 +1,13 @@
 import React, { useState } from 'react'
+import {useCookies} from 'react-cookie'
 import Model from './Model'
 const ListHeader = ({listName, getData}) => {
+  const [cookies,setCookie, removeCookie] =useCookies(null)
   const [showModel,setShowModel]= useState(false)
   const SignOut=()=>{
-    console.log("signOut");
+    removeCookie('Email');
+    removeCookie('AuthToken')
+    window.location.reload();
   }
     return (
     <div className='list-header'>
